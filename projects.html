@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects - Academic Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">MIVA Portfolio</div>
+
+      <nav>
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Toggle Button (Placed last to occupy the far right on mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Sample Projects</h2>
+      <p>Below are three key assignments completed to practice modern web standards and client-side logic.</p>
+
+      <!-- Projects Grid Layout (CSS Grid) -->
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=400&auto=format&fit=crop" alt="Project Quiz App Image" class="project-img">
+          <div class="project-details">
+            <h3>Interactive Quiz App</h3>
+            <p>An application allowing users to complete quizzes dynamically. Built using semantic markup and dynamic DOM updating functionality.</p>
+            <a href="https://github.com/" target="_blank" class="project-link">View Repository &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=400&auto=format&fit=crop" alt="Project Resource Hub Image" class="project-img">
+          <div class="project-details">
+            <h3>Academic Resource Hub</h3>
+            <p>A structured repository of learning resources compiled for easy student access. Implements CSS responsive layout systems.</p>
+            <a href="https://github.com/" target="_blank" class="project-link">View Repository &rarr;</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop" alt="Project Budget Tracker Image" class="project-img">
+          <div class="project-details">
+            <h3>Budget Tracking Utility</h3>
+            <p>A script-based transaction dashboard that charts user expenses against static targets. Integrates input evaluation workflows.</p>
+            <a href="https://github.com/" target="_blank" class="project-link">View Repository &rarr;</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MIVA Student Portfolio. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner - Academic Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">MIVA Portfolio</div>
+
+      <nav>
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html" class="active">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Toggle Button (Placed last to occupy the far right on mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Academic Planner</h2>
+      <p>Add and manage your assignments, study hours, or tasks. Complete or remove items dynamically using the console interface below.</p>
+
+      <!-- Task input controls -->
+      <div class="planner-form">
+        <input type="text" id="task-input" placeholder="Type a task name or study target...">
+        <button id="add-task-btn">Add Task</button>
+      </div>
+
+      <!-- Live Dynamic Task Container -->
+      <ul id="task-list" class="task-list">
+        <!-- Dynamic elements rendered by JavaScript are appended here -->
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MIVA Student Portfolio. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Academic Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">MIVA Portfolio</div>
+
+      <nav>
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Toggle Button (Placed last to occupy the far right on mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Educational Background</h2>
+      <p>Below is a summary of my current and historical educational profile.</p>
+
+      <!-- HTML Table Element Requirement -->
+      <table>
+        <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Degree / Course</th>
+            <th>Year</th>
+            <th>Focus Area</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MIVA Open University</td>
+            <td>B.Sc. Computer Science</td>
+            <td>2024 - Present</td>
+            <td>Software Development & Web Technologies</td>
+          </tr>
+          <tr>
+            <td>High Academy School</td>
+            <td>Secondary School Certificate</td>
+            <td>2018 - 2023</td>
+            <td>Science & Mathematics</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Career Aspirations</h2>
+      <p>My professional goal is to transition into full-stack software development. I aspire to design and engineer intuitive digital systems that solve localized problems, with a focus on education technology and mobile applications. I plan to build systems that improve access to high-quality learning resources globally.</p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <p>These are the core technologies and workflows I currently utilize and maintain:</p>
+      <!-- HTML List Element Requirement -->
+      <ul class="custom-list">
+        <li><strong>Programming:</strong> HTML5, CSS3 (CSS Grid & Flexbox), Vanilla JavaScript (ES6+)</li>
+        <li><strong>Version Control:</strong> Git branch management, GitHub repository workflow</li>
+        <li><strong>Databases:</strong> Structured Query Language (SQL) concepts</li>
+        <li><strong>UI Design:</strong> Responsive layouts and interface wireframing</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Hobbies and Interests</h2>
+      <p>Outside of strictly academic pursuits, I engage in various creative and analytic activities:</p>
+      <ul class="custom-list">
+        <li>Reading tech journals and analyzing industry updates.</li>
+        <li>Playing chess to improve analytical reasoning.</li>
+        <li>Amateur mobile photography.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MIVA Student Portfolio. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

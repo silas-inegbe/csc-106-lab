@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Academic Portfolio - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">MIVA Portfolio</div>
+
+      <nav>
+        <ul id="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Toggle Button (Placed last to occupy the far right on mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="badge">Undergraduate Student</span>
+        <h1>Silas Inegbe</h1>
+        <p class="welcome-msg">B.Sc. Computer Science | MIVA Open University</p>
+
+        <!-- Structured Student Information -->
+        <div class="student-meta">
+          <p><strong>Matric Number:</strong> 2025/B/CSC/0543</p>
+          <p><strong>Current Level:</strong> 100 Level</p>
+          <p><strong>Current Location:</strong> Portharcourt, Nigeria</p>
+          <p><strong>Focus Area:</strong> Responsive Web Design, Systems Architecture, and Software Development</p>
+        </div>
+
+        <div class="quick-contact">
+          <a href="mailto:s.inegbe8096@miva.edu.ng" class="btn-primary">Email Me</a>
+          <a href="projects.html" class="btn-secondary">View Work</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="/images/silas-nbg.jpg" alt="Silas Inegbe - Portrait">
+      </div>
+    </section>
+
+    <!-- Highlights/Key Focus Areas Section -->
+    <section class="highlights-section">
+      <h2>Academic Focus Areas</h2>
+      <p>My structured learning journey at MIVA Open University centers around several core computing pillars:</p>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="icon-holder">💻</div>
+          <h3>Front-End Development</h3>
+          <p>Structuring accessible, semantic web layouts using modern HTML5, highly responsive CSS grids, and interactive native JavaScript systems.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="icon-holder">⚙️</div>
+          <h3>Algorithms & Logic</h3>
+          <p>Analyzing problem complexity, structuring dynamic logic processes, and developing optimized program flows to build solid foundations.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="icon-holder">📊</div>
+          <h3>Database Systems</h3>
+          <p>Understanding basic schemas, configuring safe relationships, and executing relational database management operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biography and Multimedia Presentation Section -->
+    <section>
+      <h2>Brief Biography</h2>
+      <p>I am a highly motivated student exploring the vast ecosystem of modern software engineering. By combining theoretical concepts from lectures with hands-on practice, I design responsive web applications that aim to address modern, real-world accessibility requirements. I aim to create secure digital environments that optimize productivity and enhance learning outcomes.</p>
+
+      <div class="multimedia-container">
+        <h3>Introductory Audio Pitch</h3>
+        <p class="multimedia-caption">Listen to a brief audio introduction about my academic background and engineering objectives:</p>
+        <!-- HTML5 Multimedia Element Requirement -->
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MIVA Student Portfolio. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
