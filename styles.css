@@ -8,7 +8,7 @@
   --card-bg: #ffffff;
   --success-color: #2ec4b6;
   --danger-color: #e71d36;
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Base resets */
@@ -33,7 +33,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -62,10 +62,13 @@ nav ul li a {
   font-weight: 500;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-nav ul li a:hover, nav ul li a.active {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
@@ -89,7 +92,9 @@ nav ul li a:hover, nav ul li a.active {
   height: 3px;
   background-color: #fff;
   border-radius: 2px;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
 }
 
 /* Hamburger transformation active animations */
@@ -162,12 +167,15 @@ nav ul li a:hover, nav ul li a.active {
   gap: 1rem;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   text-decoration: none;
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
   font-weight: 600;
-  transition: background-color 0.3s, transform 0.2s;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
 }
 
 .btn-primary {
@@ -202,7 +210,7 @@ nav ul li a:hover, nav ul li a.active {
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid var(--primary-color);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Academic Highlights Layout */
@@ -218,16 +226,19 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .highlight-card {
-  background-color: #fdfdfd;
+  background: linear-gradient(145deg, #ffffff, #f7fbff);
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  border: 1px solid #eee;
-  transition: transform 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(13, 59, 102, 0.08);
+  border: 1px solid rgba(13, 59, 102, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .highlight-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(13, 59, 102, 0.12);
 }
 
 .icon-holder {
@@ -245,13 +256,16 @@ main {
 
 section {
   margin-bottom: 3rem;
-  background-color: var(--card-bg);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
   padding: 2.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(13, 59, 102, 0.08);
+  border: 1px solid rgba(13, 59, 102, 0.06);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
@@ -281,7 +295,8 @@ table {
   margin-bottom: 1.5rem;
 }
 
-table th, table td {
+table th,
+table td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
@@ -316,24 +331,64 @@ table tr:nth-child(even) {
 }
 
 .project-card {
-  background: var(--card-bg);
-  border-radius: 8px;
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f8fbff);
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(13, 59, 102, 0.12);
+  border: 1px solid rgba(13, 59, 102, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  animation: fadeUp 0.6s ease both;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(244, 211, 94, 0.18),
+    transparent 45%,
+    rgba(238, 150, 75, 0.1)
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 16px 30px rgba(13, 59, 102, 0.16);
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-img {
   width: 100%;
-  height: 200px;
+  height: 210px;
   object-fit: cover;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+  filter: brightness(1.02);
 }
 
 .project-details {
@@ -341,11 +396,50 @@ table tr:nth-child(even) {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.simulated-tag {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 0.7rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 10px rgba(244, 211, 94, 0.25);
+  animation: tagPulse 2.4s ease-in-out infinite;
 }
 
 .project-details h3 {
   font-size: 1.25rem;
   margin-bottom: 0.8rem;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tagPulse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
 }
 
 .project-link {
@@ -369,23 +463,36 @@ table tr:nth-child(even) {
 
 .planner-form input[type="text"] {
   flex: 1;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d7e2eb;
+  border-radius: 999px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.planner-form input[type="text"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(13, 59, 102, 0.12);
 }
 
 .planner-form button {
-  padding: 0.8rem 1.5rem;
-  background-color: var(--primary-color);
+  padding: 0.9rem 1.4rem;
+  background: linear-gradient(135deg, var(--primary-color), #144b7a);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 6px 16px rgba(13, 59, 102, 0.2);
 }
 
 .planner-form button:hover {
-  background-color: #082540;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 59, 102, 0.24);
 }
 
 .task-list {
@@ -397,12 +504,13 @@ table tr:nth-child(even) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f9f9f9;
-  padding: 1rem;
+  background: linear-gradient(135deg, #ffffff, #f8fbff);
+  padding: 1rem 1.1rem;
   border-left: 5px solid var(--accent-color);
   margin-bottom: 1rem;
-  border-radius: 0 4px 4px 0;
+  border-radius: 10px;
   transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(13, 59, 102, 0.06);
 }
 
 .task-item.completed {
@@ -416,10 +524,18 @@ table tr:nth-child(even) {
 
 .task-actions button {
   margin-left: 0.5rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.45rem 0.8rem;
   border: none;
-  border-radius: 3px;
+  border-radius: 999px;
   cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.task-actions button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
 }
 
 .complete-btn {
@@ -451,12 +567,23 @@ table tr:nth-child(even) {
   font-weight: 600;
 }
 
-.form-group input, .form-group textarea {
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.form-group input,
+.form-group textarea {
+  padding: 0.9rem 1rem;
+  border: 1px solid #d7e2eb;
+  border-radius: 10px;
   font-family: inherit;
   font-size: 1rem;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(13, 59, 102, 0.12);
 }
 
 .form-group textarea {
@@ -466,17 +593,21 @@ table tr:nth-child(even) {
 
 .contact-form button {
   padding: 1rem;
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), #144b7a);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  box-shadow: 0 8px 20px rgba(13, 59, 102, 0.18);
 }
 
 .contact-form button:hover {
-  background-color: #082540;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(13, 59, 102, 0.24);
 }
 
 .error-message {
@@ -503,7 +634,7 @@ table tr:nth-child(even) {
 
 /* Global Footer styling */
 footer {
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), #144b7a);
   color: #fff;
   text-align: center;
   padding: 1.5rem;
@@ -533,7 +664,10 @@ footer {
     transform: translateY(-15px);
     opacity: 0;
     visibility: hidden;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.4s;
+    transition:
+      transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.3s ease,
+      visibility 0.4s;
   }
 
   /* Hamburger Menu Toggled State */
